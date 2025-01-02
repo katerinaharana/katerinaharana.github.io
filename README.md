@@ -1,5 +1,6 @@
 -👋 Hi, I’m @katerinaharana, an MSc in Mathematics and an aspiring Data Analyst!
 -👀 I have a strong interest in mathematics, data science, and turning data into actionable insights.
+
 -🌱 I’m currently enhancing my skills in Python, SQL, and machine learning to pursue a career in data analysis.
 -📫 Feel free to reach out to me at kate.harana@gmail.com.
 
