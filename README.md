@@ -1,8 +1,7 @@
-- 👋 Hi, I’m @katerinaharana, Msc in mathematics and aspiring data analyst!
-- 👀 I’m interested in mathematics and data science
-- 🌱 I’m currently working on developing my skills in Python programming, SQL, and machine learning.
-- 📫 How to reach me: kate.harana@gmail.com
-
+-👋 Hi, I’m @katerinaharana, an MSc in Mathematics and an aspiring Data Analyst!
+-👀 I have a strong interest in mathematics, data science, and turning data into actionable insights.
+-🌱 I’m currently enhancing my skills in Python, SQL, and machine learning to pursue a career in data analysis.
+-📫 Feel free to reach out to me at kate.harana@gmail.com.
 
 <!---
 katerinaharana/katerinaharana is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
