@@ -2,7 +2,7 @@
 
 -👀 I have a strong interest in mathematics, data science, and turning data into actionable insights.
 
--🌱 I’m currently enhancing my skills in Python, SQL, and machine learning to pursue a career in data analysis.
+-🌱 I’m currently enhancing my skills in Python, SQL, and machine learning to pursue a data realted career.
 
 -📫 Feel free to reach out to me at kate.harana@gmail.com.
 
