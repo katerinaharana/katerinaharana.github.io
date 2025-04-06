@@ -38,7 +38,6 @@
       color: var(--text-soft);
       text-decoration: none;
       font-weight: 500;
-      letter-spacing: 0.5px;
       transition: color 0.3s ease;
     }
 
@@ -60,6 +59,7 @@
     h2 {
       font-size: 2em;
       font-weight: 600;
+      color: var(--accent-color);
       margin-bottom: 20px;
     }
 
@@ -68,11 +68,6 @@
       margin: 0 auto 20px;
       font-size: 1.1em;
       color: #e0e0e0;
-    }
-
-    a {
-      color: var(--accent-color);
-      text-decoration: none;
     }
 
     .btn {
@@ -93,66 +88,69 @@
 
     section {
       padding: 60px 20px;
-      display: flex;
-      justify-content: center;
+      text-align: center;
     }
 
     .card {
       background-color: var(--card-bg);
-      padding: 40px 30px;
+      padding: 30px;
       border-radius: 12px;
-      max-width: 800px;
-      width: 100%;
+      margin: 20px;
       box-shadow: 0 0 20px rgba(255,255,255,0.03);
       border: 1px solid #2b2b2b;
     }
-.featured-project {
-  background-image: url('image.png');
-  background-size: cover;
-  background-position: center;
-  padding: 80px 20px;
-  position: relative;
-}
 
-.featured-project::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(17, 17, 17, 0.75); /* Fades image */
-  z-index: 0;
-}
-
-.featured-project .card.transparent {
-  background-color: rgba(26, 26, 26, 0.85);
-  position: relative;
-  z-index: 1;
-  backdrop-filter: blur(2px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* Tag style */
-.tag {
-  display: inline-block;
-  background: var(--accent-color);
-  color: #111;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 0.9em;
-  margin: 5px;
-}
-
-
-    ul {
-      list-style: none;
-      padding: 0;
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
       margin: 0 auto;
-      max-width: 600px;
-      text-align: left;
     }
 
-    ul li {
-      margin-bottom: 8px;
-      color: #dddddd;
+    .featured {
+      background-image: url('image.png');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .featured::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(17, 17, 17, 0.75);
+      z-index: 0;
+      border-radius: 12px;
+    }
+
+    .featured .card-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--accent-color);
+      color: #111;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      margin: 5px;
+    }
+
+    .two-column {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .two-column .card {
+      flex: 1;
+      min-width: 300px;
     }
 
     footer {
@@ -165,118 +163,118 @@
 </head>
 <body>
 
-  <!-- Navigation Menu -->
+  <!-- Navigation -->
   <nav>
     <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#education">Education</a>
     <a href="#projects">Projects</a>
-    <a href="#visuals">Dashboards</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- Header -->
   <header>
     <h1>Hi, I'm Katerina Charana</h1>
     <p>Aspiring data scientist with a strong mathematics background and foundational skills in Python, SQL, and data analysis.</p>
     <a class="btn" href="#about">Learn more about me</a>
   </header>
 
+  <!-- About -->
   <section id="about">
     <div class="card">
       <h2>About Me</h2>
       <p>
-        I’m an aspiring data scientist with a strong background in applied mathematics. I'm passionate about making data useful — through meaningful analysis
-      and visualization. Currently, I’m enhancing my skills in machine learning, cloud technologies, and
-      business intelligence tools to transition into the tech field.
+        I’m an aspiring data scientist with a background in applied mathematics and hands-on experience in data management,
+        analytics, and technical collaboration. I'm passionate about making data useful — through meaningful analysis,
+        visualization, and communication. Currently, I’m enhancing my skills in machine learning, cloud technologies, and
+        business intelligence tools to transition into the tech field.
       </p>
     </div>
   </section>
 
-  <section id="skills">
-    <div class="card">
-      <h2>Skills</h2>
-      <p>Python • SQL • Power BI • Pandas • Scikit-Learn </p>
-    </div>
-  </section>
-
-  <section id="certifications">
-    <div class="card">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Azure Databricks & Spark for Data Engineers (in progress)</li>
-        <li>Data Science & Business Intelligence Bootcamp – Code.Hub (2022)</li>
-        <li>Python for Machine Learning & Data Science – Udemy</li>
-        <li>SQL Bootcamp – Udemy</li>
-        <li>Machine Learning – Coursera</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="education">
-    <div class="card">
-      <h2>Education</h2>
-      <ul>
-        <li>MSc in Applied Mathematics – Hellenic Open University (2022)</li>
-        <li>BSc in Mathematics – University of Patras (2019)</li>
-      </ul>
-    </div>
-  </section>
-
+  <!-- Projects -->
   <section id="projects">
-  <div class="featured-project">
-    <div class="card transparent">
-      <h2 style="color: var(--accent-color);">Projects</h2>
+    <h2>Projects</h2>
+    <div class="projects-grid">
 
-      <h3>Predicting the City Cycle Fuel Consumption in mpg of a Car: A Classification Problem</h3>
-
-      <p>
-        Develop a classification model that predicts a car's fuel efficiency category based on various attributes.
-        The goal is to create a proof-of-concept tool that could help car rental companies make data-driven decisions
-        when updating their fleets.
-      </p>
-
-      <div style="margin: 20px 0;">
-        <span class="tag">Python</span>
-        <span class="tag">Machine Learning</span>
-        <span class="tag">Neural Networks</span>
-        <span class="tag">Classification</span>
-        <span class="tag">EDA</span>
+      <!-- Featured Project -->
+      <div class="card featured">
+        <div class="card-content">
+          <h3>Predicting the City Cycle Fuel Consumption in mpg of a Car</h3>
+          <p>
+            Develop a classification model that predicts a car's fuel efficiency category based on various attributes.
+            The goal is to create a proof-of-concept tool that could help car rental companies make data-driven decisions
+            when updating their fleets.
+          </p>
+          <div>
+            <span class="tag">Python</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Neural Networks</span>
+            <span class="tag">Classification</span>
+            <span class="tag">EDA</span>
+          </div>
+          <p>
+            🔗 <a href="https://github.com/katerinaharana/Team-2-Project" target="_blank">GitHub Repo</a><br>
+            📄 <a href="Team 2 Project presentation .pdf" target="_blank">View Presentation</a>
+          </p>
+        </div>
       </div>
 
-      <p>
-        🔗 <a href="https://github.com/katerinaharana/Team-2-Project" target="_blank">GitHub Repository</a><br>
-        📄 <a href="Team 2 Project presentation .pdf" target="_blank">View Presentation</a>
-      </p> </p>
-      <p><em>More projects in SQL and PowerBI coming soon...</em></p>
-    </div>
+      <!-- Placeholder for Future Projects -->
+      <div class="card">
+        <h3>[Upcoming Project]</h3>
+        <p>Stay tuned for my next project using SQL, Power BI, and interactive dashboards.</p>
+        <div>
+          <span class="tag">SQL</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">Data Visualization</span>
+        </div>
+      </div>
 
-  </div>
-    </div>
-  </div>
-</section>
-
-
-  <section id="visuals">
-    <div class="card">
-      <h2>Dashboards & Visuals</h2>
-      <p>Screenshots of Power BI dashboards and other visualizations will be added here soon.</p>
-      <!-- Example: <img src="dashboard1.png" alt="Dashboard Preview" style="max-width: 80%; margin-top: 20px;"> -->
     </div>
   </section>
 
-  <section id="contact">
-    <div class="card">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:kate.harana@gmail.com">kate.harana@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/katerina-charana-074159213/" target="_blank">View my profile</a></p>
-      <p><a class="btn" href="Katerina-Charana-CV.pdf" target="_blank">Download CV</a></p>
+  <!-- Split Grid: Skills & Certifications -->
+  <section id="skills">
+    <div class="two-column">
+      <div class="card">
+        <h2>Skills</h2>
+        <p>Python • SQL • Power BI • Pandas • Scikit-Learn • Excel • Git • Azure • CRM/ERP • LaTeX</p>
+      </div>
+      <div class="card">
+        <h2>Certifications</h2>
+        <ul style="text-align:left; max-width: 600px; margin: 0 auto;">
+          <li>Azure Databricks & Spark for Data Engineers (in progress)</li>
+          <li>Data Science & Business Intelligence Bootcamp – Code.Hub (2022)</li>
+          <li>Python for Machine Learning & Data Science – Udemy</li>
+          <li>SQL Bootcamp – Udemy</li>
+          <li>Machine Learning – Coursera</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Split Grid: Education & Contact -->
+  <section id="education">
+    <div class="two-column">
+      <div class="card">
+        <h2>Education</h2>
+        <ul style="text-align:left; max-width: 600px; margin: 0 auto;">
+          <li>MSc in Applied Mathematics – Hellenic Open University (2022)</li>
+          <li>BSc in Mathematics – University of Patras (2019)</li>
+        </ul>
+      </div>
+      <div class="card" id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:kate.harana@gmail.com">kate.harana@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/katerina-charana-074159213/" target="_blank">View my profile</a></p>
+        <p><a class="btn" href="Katerina-Charana-CV.pdf" target="_blank">Download CV</a></p>
+      </div>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Katerina Charana</p>
   </footer>
-
 </body>
 </html>
