@@ -7,48 +7,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --accent-color: #a8b2d1;
-      --bg-dark: #111111;
-      --text-light: #f5f5f5;
-      --text-soft: #cccccc;
-      --card-bg: #1a1a1a;
+      --bg-light: #fefdfc;
+      --bg-soft: #f5f2ec;
+      --text-dark: #1f1f1f;
+      --text-mid: #3b2f2f;
+
+      --accent-1: #6b797a;
+      --accent-2: #c19775;
+      --accent-3: #4e5858;
+      --accent-4: #5a3935;
+      --accent-5: #819393;
+      --accent-6: #a29d97;
+
+      --card-border: #ddd;
     }
 
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: var(--bg-dark);
-      color: var(--text-light);
+      background-color: var(--bg-light);
+      color: var(--text-dark);
       line-height: 1.6;
     }
 
     nav {
       position: sticky;
       top: 0;
-      background-color: var(--bg-dark);
+      background-color: var(--bg-light);
       display: flex;
       justify-content: center;
       gap: 30px;
       padding: 15px 0;
-      border-bottom: 1px solid #2a2a2a;
+      border-bottom: 1px solid var(--card-border);
       z-index: 1000;
     }
 
     nav a {
-      color: var(--text-soft);
+      color: var(--text-mid);
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.3s ease;
     }
-    .superstore-bg {
-  background-image: url('superstore_bg.png'); 
-  background-size: cover;
-  background-position: center;
-}
-
 
     nav a:hover {
-      color: var(--accent-color);
+      color: var(--accent-4);
     }
 
     header {
@@ -65,7 +66,7 @@
     h2 {
       font-size: 2em;
       font-weight: 600;
-      color: var(--accent-color);
+      color: var(--accent-4);
       margin-bottom: 20px;
     }
 
@@ -73,37 +74,25 @@
       max-width: 700px;
       margin: 0 auto 20px;
       font-size: 1.1em;
-      color: #e0e0e0;
     }
 
     .btn {
-      border: 1px solid var(--accent-color);
+      background-color: var(--accent-1);
+      color: white;
+      border: none;
       padding: 10px 24px;
-      text-decoration: none;
-      color: var(--text-light);
-      transition: all 0.3s ease;
       font-weight: 500;
-      display: inline-block;
-      margin-top: 20px;
+      border-radius: 4px;
+      text-decoration: none;
     }
 
     .btn:hover {
-      background-color: var(--accent-color);
-      color: var(--bg-dark);
+      background-color: var(--accent-4);
     }
 
     section {
       padding: 60px 20px;
       text-align: center;
-    }
-
-    .card {
-      background-color: var(--card-bg);
-      padding: 30px;
-      border-radius: 12px;
-      margin: 20px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.03);
-      border: 1px solid #2b2b2b;
     }
 
     .projects-grid {
@@ -114,31 +103,41 @@
       margin: 0 auto;
     }
 
-    .featured {
-      background-image: url('image.png');
+    .card {
+      background-color: var(--bg-soft);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 30px;
+      text-align: left;
+    }
+
+    .card.featured-1 {
+      background-image: url('project1.jpg');
       background-size: cover;
       background-position: center;
       position: relative;
+      color: white;
     }
 
-    .featured::before {
+    .card.featured-1::before,
+    .card.featured-2::before {
       content: "";
       position: absolute;
       inset: 0;
-      background-color: rgba(17, 17, 17, 0.75);
+      background-color: rgba(255, 255, 255, 0.85);
       z-index: 0;
       border-radius: 12px;
     }
 
-    .featured .card-content {
+    .card .card-content {
       position: relative;
       z-index: 1;
     }
 
     .tag {
       display: inline-block;
-      background: var(--accent-color);
-      color: #111;
+      background-color: var(--accent-5);
+      color: var(--text-dark);
       padding: 4px 10px;
       border-radius: 20px;
       font-size: 0.9em;
@@ -154,22 +153,16 @@
       margin: 0 auto;
     }
 
-    .two-column .card {
-      flex: 1;
-      min-width: 300px;
-    }
-
     footer {
       text-align: center;
       padding: 40px 20px;
       font-size: 0.9em;
-      color: #888;
+      color: var(--accent-3);
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -178,123 +171,52 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Header -->
   <header>
     <h1>Hi, I'm Katerina Charana</h1>
     <p>Aspiring data scientist with a strong mathematics background and foundational skills in Python, SQL, and data analysis.</p>
     <a class="btn" href="#contact">Learn more about me</a>
   </header>
 
-  
-  <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects-grid">
 
-      <!-- Featured Project -->
-      <div class="card featured">
+      <div class="card featured-1">
         <div class="card-content">
-          <h3>Predicting the City Cycle Fuel Consumption in mpg of a Car</h3>
-          <p>
-            In this project we developed a classification model that predicts a car's fuel efficiency category based on various attributes.
-            The goal is to create a proof-of-concept tool that could help car rental companies make data-driven decisions
-            when updating their fleets.
-          </p>
+          <h3>Predicting the City Cycle Fuel Consumption</h3>
+          <p>Classification model to predict fuel efficiency category using ML techniques.</p>
           <div>
             <span class="tag">Python</span>
-            <span class="tag">Machine Learning</span>
+            <span class="tag">ML</span>
             <span class="tag">Neural Networks</span>
-            <span class="tag">Classification</span>
-            <span class="tag">K-Means</span>
-            <span class="tag">PCA</span>
-            <span class="tag">EDA</span>
           </div>
           <p>
-            🔗 <a href="https://github.com/katerinaharana/Team-2-Project" target="_blank">GitHub Repo</a><br>
-            📄 <a href="Team 2 Project presentation .pdf" target="_blank">View Presentation</a>
+            🔗 <a href="#" target="_blank">GitHub Repo</a><br>
+            📄 <a href="#" target="_blank">View Presentation</a>
           </p>
         </div>
       </div>
 
-       <!-- Featured Project -->
-      <div class="card featured superstore_bg">
-          <h3>Superstore Sales Analysis</h3>
-          <p>
-            This Power BI project analyzes sales data from a Superstore dataset. It provides interactive visuals and insights into business performance across segments, categories, time periods, and geographies — plus a 15-day forecast with seasonal trends.
-          </p>
-          <div>
-            <span class="tag">PowerBI</span>
-            <span class="tag">Data Analysis</span>
-            <span class="tag">Data Visualization</span>
-            <span class="tag">DAX</span>
-            <span class="tag">Measures</span>
-            <span class="tag">Power Query</span>
-          </div>
-          
-            🔗 <a href="https://github.com/katerinaharana/Superstore" target="_blank">GitHub Repo</a><br>
-            📄 <a href="https://app.powerbi.com/view?r=your-public-link" target="_blank">
-  <button class="btn">View Dashboard</button>
-</a>
-
-          
-        </div>
-      </div>
-
-      <!-- Placeholder for Future Projects -->
-    <div class="card">
-        <h3>[Upcoming Project]</h3>
-        <p>Stay tuned for my next project using SQL, Power BI, and interactive dashboards.</p>
+      <div class="card">
+        <h3>Superstore Sales Analysis</h3>
+        <p>Power BI project analyzing sales data by region, category, and forecasting with seasonality.</p>
         <div>
-          <span class="tag">SQL</span>
           <span class="tag">Power BI</span>
-          <span class="tag">Data Visualization</span>
+          <span class="tag">DAX</span>
+          <span class="tag">Forecasting</span>
         </div>
+        <p>
+          🔗 <a href="https://github.com/katerinaharana/Superstore" target="_blank">GitHub Repo</a><br>
+          📄 <a href="superstore.pdf" target="_blank">View Report</a>
+        </p>
       </div>
 
-    </div>
-  </section>
-
-  <!-- Split Grid: Skills & Certifications -->
-  <section id="skills">
-    <div class="two-column">
-      <div class="card">
-        <h2>Skills</h2>
-        <p>Python • SQL • Power BI • Pandas • Scikit-Learn • ML algorithms</p>
-      </div>
-      <div class="card">
-        <h2>Certifications</h2>
-        <ul style="text-align:left; max-width: 600px; margin: 0 auto;">
-          <li>Azure Databricks & Spark for Data Engineers (in progress)</li>
-          <li>Data Science & Business Intelligence Bootcamp – Code.Hub (2022)</li>
-          <li>Python for Machine Learning & Data Science – Udemy</li>
-          <li>SQL Bootcamp – Udemy</li>
-          <li>Machine Learning – Coursera</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Split Grid: Education & Contact -->
-  <section id="education">
-    <div class="two-column">
-      <div class="card">
-        <h2>Education</h2>
-        <ul style="text-align:left; max-width: 600px; margin: 0 auto;">
-          <li>MSc in Applied Mathematics – Hellenic Open University (2022)</li>
-          <li>BSc in Mathematics – University of Patras (2019)</li>
-        </ul>
-      </div>
-      <div class="card" id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:kate.harana@gmail.com">kate.harana@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/katerina-charana-074159213/" target="_blank">View my profile</a></p>
-        <p><a class="btn" href="Katerina-Charana-CV.pdf" target="_blank">Download CV</a></p>
-      </div>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Katerina Charana</p>
   </footer>
+
 </body>
 </html>
