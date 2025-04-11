@@ -109,22 +109,21 @@
       border-radius: 12px;
       padding: 30px;
       text-align: left;
+      position: relative;
     }
 
     .card.featured-1 {
       background-image: url('project1.jpg');
       background-size: cover;
       background-position: center;
-      position: relative;
       color: white;
     }
 
-    .card.featured-1::before,
-    .card.featured-2::before {
+    .card.featured-1::before {
       content: "";
       position: absolute;
       inset: 0;
-      background-color: rgba(255, 255, 255, 0.85);
+      background-color: rgba(0, 0, 0, 0.6);
       z-index: 0;
       border-radius: 12px;
     }
@@ -136,8 +135,8 @@
 
     .tag {
       display: inline-block;
-      background-color: var(--accent-5);
-      color: var(--text-dark);
+      background-color: var(--accent-1);
+      color: white;
       padding: 4px 10px;
       border-radius: 20px;
       font-size: 0.9em;
@@ -187,8 +186,12 @@
           <p>Classification model to predict fuel efficiency category using ML techniques.</p>
           <div>
             <span class="tag">Python</span>
-            <span class="tag">ML</span>
+            <span class="tag">Machine Learning</span>
             <span class="tag">Neural Networks</span>
+            <span class="tag">Classification</span>
+            <span class="tag">K-Means</span>
+            <span class="tag">PCA</span>
+            <span class="tag">EDA</span>
           </div>
           <p>
             🔗 <a href="#" target="_blank">GitHub Repo</a><br>
@@ -202,13 +205,27 @@
         <p>Power BI project analyzing sales data by region, category, and forecasting with seasonality.</p>
         <div>
           <span class="tag">Power BI</span>
+          <span class="tag">Data Analysis</span>
+          <span class="tag">Data Visualization</span>
           <span class="tag">DAX</span>
-          <span class="tag">Forecasting</span>
+          <span class="tag">Measures</span>
+          <span class="tag">Power Query</span>
         </div>
         <p>
           🔗 <a href="https://github.com/katerinaharana/Superstore" target="_blank">GitHub Repo</a><br>
           📄 <a href="superstore.pdf" target="_blank">View Report</a>
         </p>
+      </div>
+
+      <div class="card">
+        <h3>[Upcoming SQL Project]</h3>
+        <p>Placeholder for an SQL data analysis and reporting dashboard. Coming soon!</p>
+        <div>
+          <span class="tag">SQL</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Data Wrangling</span>
+          <span class="tag">ETL</span>
+        </div>
       </div>
 
     </div>
