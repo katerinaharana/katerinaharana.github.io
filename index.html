@@ -112,6 +112,10 @@
       position: relative;
     }
 
+    .card:nth-child(2) { background-color: #f5e9de; }
+    .card:nth-child(3) { background-color: #e9e7e2; }
+    .card:nth-child(4) { background-color: #f0ece5; }
+
     .card.featured-1 {
       background-image: url('project1.jpg');
       background-size: cover;
@@ -131,6 +135,12 @@
     .card .card-content {
       position: relative;
       z-index: 1;
+    }
+
+    .card a {
+      color: var(--accent-4);
+      font-weight: bold;
+      text-decoration: underline;
     }
 
     .tag {
@@ -228,6 +238,38 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="two-column">
+      <div class="card">
+        <p>Python • SQL • Power BI • Pandas • Scikit-Learn • ML Algorithms • Data Visualization • DAX</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="two-column">
+      <div class="card">
+        <ul style="text-align:left; max-width: 600px; margin: 0 auto;">
+          <li>MSc in Applied Mathematics – Hellenic Open University (2022)</li>
+          <li>BSc in Mathematics – University of Patras (2019)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="two-column">
+      <div class="card">
+        <p>Email: <a href="mailto:kate.harana@gmail.com">kate.harana@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/katerina-charana-074159213/" target="_blank">View my profile</a></p>
+        <p><a class="btn" href="Katerina-Charana-CV.pdf" target="_blank">Download CV</a></p>
+      </div>
     </div>
   </section>
 
