@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -19,6 +21,8 @@
       --accent-6: #a29d97;
       --accent-blue: #2e3a59;
       --accent-magenta: #5a3b5d;
+      --accent-purple: #d8c4db;
+      --accent-rose: #eecfd2;
       --card-border: #ddd;
     }
     body {
@@ -75,9 +79,11 @@
       font-weight: 500;
       border-radius: 4px;
       text-decoration: none;
+      transition: all 0.3s ease;
     }
     .btn:hover {
       background-color: var(--accent-4);
+      transform: scale(1.05);
     }
     section {
       padding: 60px 20px;
@@ -97,6 +103,10 @@
       padding: 30px;
       text-align: left;
       position: relative;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
     }
     .card:nth-child(2) { background-color: #f5e9de; }
     .card:nth-child(3) { background-color: #e9e7e2; }
@@ -133,6 +143,10 @@
       border-radius: 20px;
       font-size: 0.9em;
       margin: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .tag:hover {
+      background-color: var(--accent-magenta);
     }
     .two-column {
       display: flex;
@@ -230,6 +244,21 @@
       </div>
     </div>
   </section>
+
+  <section id="certifications">
+  <h2>Certifications</h2>
+  <div class="two-column">
+    <div class="card" style="background-color: var(--accent-rose);">
+      <ul style="text-align:left; max-width: 600px; margin: 0 auto;">
+        <li>Azure Databricks & Spark for Data Engineers – Microsoft (in progress)</li>
+        <li>Data Science & Business Intelligence Bootcamp – Code.Hub (2022)</li>
+        <li>Python for Machine Learning & Data Science – Udemy</li>
+        <li>SQL Bootcamp – Udemy</li>
+        <li>Machine Learning – Coursera</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
   <section id="skills">
     <h2>Skills</h2>
