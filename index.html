@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -110,21 +108,17 @@
     }
     .card:nth-child(2) { background-color: #f5e9de; }
     .card:nth-child(3) { background-color: #e9e7e2; }
-    .card:nth-child(4) { background-color: #f0ece5; }
-    .card:nth-child(5) { background-color: #e0dff4; }
-    .card.featured-1 { background-color:  #1e3d59;}
-    .card.featured-1::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: 0;
-      border-radius: 12px;
+
+    .card.featured-1 {
+      background-color: #d0e6e5; /* light petrol */
+      color: #1a3c3c;
     }
-    .card .card-content {
-      position: relative;
-      z-index: 1;
+
+    .card.featured-2 {
+      background-color: #e6e3f5; /* soft lavender */
+      color: #3c3c5c;
     }
+
     .card a {
       color: var(--accent-magenta);
       font-weight: bold;
@@ -203,12 +197,10 @@
         <h3>Superstore Sales Analysis</h3>
         <p>Power BI project analyzing sales data by region, category, and forecasting with seasonality.</p>
         <div style="margin: 15px 0;">
-        <a href="https://streamable.com/nddlh8" target="_blank" style="display: inline-block; background-color: var(--accent-magenta); color: white; padding: 10px 18px; border-radius: 6px; font-weight: bold; text-decoration: none;">
-        ▶️ Watch Demo Video
-           </a>
-</div>
-
-
+          <a href="https://streamable.com/nddlh8" target="_blank" style="display: inline-block; background-color: var(--accent-magenta); color: white; padding: 10px 18px; border-radius: 6px; font-weight: bold; text-decoration: none;">
+            ▶️ Watch Demo Video
+          </a>
+        </div>
         <div>
           <span class="tag">Power BI</span>
           <span class="tag">Data Analysis</span>
@@ -220,6 +212,7 @@
         <p>
           🔗 <a href="https://github.com/katerinaharana/Superstore" target="_blank">GitHub Repo</a><br>
           📄 <a href="https://app.powerbi.com/groups/me/reports/ee1a4ab8-cf63-4757-bb12-6494faf50554/b2df92bd1e5c546c2be2?experience=power-bi" target="_blank">View Report</a>
+        </p>
       </div>
 
       <div class="card">
@@ -232,7 +225,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card featured-2">
         <h3>Chatbot (Work in Progress)</h3>
         <p>Creating a Clustering-Based Intent Identification Engine</p>
         <div>
@@ -248,19 +241,19 @@
   </section>
 
   <section id="certifications">
-  <h2>Certifications</h2>
-  <div class="two-column">
-    <div class="card" style="background-color: var(--accent-rose);">
-      <ul style="text-align:left; max-width: 600px; margin: 0 auto;">
-        <li>Azure Databricks & Spark for Data Engineers – Microsoft (in progress)</li>
-        <li>Data Science & Business Intelligence Bootcamp – Code.Hub (2022)</li>
-        <li>Python for Machine Learning & Data Science – Udemy</li>
-        <li>SQL Bootcamp – Udemy</li>
-        <li>Machine Learning – Coursera</li>
-      </ul>
+    <h2>Certifications</h2>
+    <div class="two-column">
+      <div class="card" style="background-color: var(--accent-rose);">
+        <ul style="text-align:left; max-width: 600px; margin: 0 auto;">
+          <li>Azure Databricks & Spark for Data Engineers – Microsoft (in progress)</li>
+          <li>Data Science & Business Intelligence Bootcamp – Code.Hub (2022)</li>
+          <li>Python for Machine Learning & Data Science – Udemy</li>
+          <li>SQL Bootcamp – Udemy</li>
+          <li>Machine Learning – Coursera</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section id="skills">
     <h2>Skills</h2>
