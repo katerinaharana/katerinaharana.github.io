@@ -30,6 +30,12 @@
       color: var(--text-dark);
       line-height: 1.6;
     }
+
+    /* Full justify body text */
+    p, li, .card p, .card li, .card-content, .card ul {
+      text-align: justify;
+    }
+
     nav {
       position: sticky;
       top: 0;
@@ -57,12 +63,14 @@
       font-size: 3em;
       font-weight: 600;
       margin-bottom: 10px;
+      text-align: center;
     }
     h2 {
       font-size: 2em;
       font-weight: 600;
       color: var(--accent-magenta);
       margin-bottom: 20px;
+      text-align: center;
     }
     p {
       max-width: 700px;
@@ -85,230 +93,4 @@
       transform: scale(1.05);
     }
     section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .card {
-      background-color: var(--bg-soft);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 30px;
-      text-align: left;
-      position: relative;
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card.small {
-  padding: 20px;
-  font-size: 0.95em;
-  max-height: 400px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-    .card:nth-child(2) { background-color: #f5e9de; }
-    .card:nth-child(3) { background-color: #e9e7e2; }
-
-    .card.featured-1 {
-      background-color: #d0e6e5;
-      color: #1a3c3c;
-    }
-
-    .card.featured-2 {
-      background-color: #e6e3f5;
-      color: #3c3c5c;
-    }
-
-    .card a {
-      color: var(--accent-magenta);
-      font-weight: bold;
-      text-decoration: underline;
-    }
-    .tag {
-      display: inline-block;
-      background-color: var(--accent-blue);
-      color: white;
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 0.9em;
-      margin: 5px;
-      transition: background-color 0.3s ease;
-    }
-    .tag:hover {
-      background-color: var(--accent-magenta);
-    }
-    .two-column {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9em;
-      color: var(--accent-3);
-    }
-  </style>
-</head>
-<body>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <header>
-    <h1>Hi, I'm Katerina Charana</h1>
-    <p>Aspiring data scientist with a strong mathematics background and foundational skills in Python, SQL, and data analysis.</p>
-    <a class="btn" href="#contact">Learn more about me</a>
-  </header>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="card featured-1">
-        <div class="card-content">
-          <h3>Predicting the City Cycle Fuel Consumption</h3>
-          <p>Classification model to predict fuel efficiency category using ML techniques.</p>
-          <div>
-            <span class="tag">Python</span>
-            <span class="tag">Machine Learning</span>
-            <span class="tag">Neural Networks</span>
-            <span class="tag">Classification</span>
-            <span class="tag">K-Means</span>
-            <span class="tag">PCA</span>
-            <span class="tag">EDA</span>
-          </div>
-         
-         <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https://www.canva.com/design/DAGktwBkV8U/F7_mr8fK4zZ1dc6CR66Tlw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-<br>
- <p>
-            🔗 <a href="https://github.com/katerinaharana/Team-2-Project" target="_blank">GitHub Repo</a>
-          </p>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGktwBkV8U&#x2F;F7_mr8fK4zZ1dc6CR66Tlw&#x2F;view?utm_content=DAGktwBkV8U&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"> 📄  View Fullscreen Presentation </a> 
-            </a>
-          </p>
-        </div>
-      </div>
-
-      <div class="card small">
-        <h3>Superstore Sales Analysis</h3>
-        <p>Power BI project analyzing sales data by region, category, and forecasting with seasonality.</p>
-        <div style="margin: 15px 0;">
-          <a href="https://streamable.com/nddlh8" target="_blank" style="display: inline-block; background-color: var(--accent-magenta); color: white; padding: 10px 18px; border-radius: 6px; font-weight: bold; text-decoration: none;">
-            ▶️ Watch Demo Video
-          </a>
-        </div>
-        <div>
-          <span class="tag">Power BI</span>
-          <span class="tag">Data Analysis</span>
-          <span class="tag">Data Visualization</span>
-          <span class="tag">DAX</span>
-          <span class="tag">Measures</span>
-          <span class="tag">Power Query</span>
-        </div>
-        <p>
-          🔗 <a href="https://github.com/katerinaharana/Superstore" target="_blank">GitHub Repo</a><br>
-          📄 <a href="https://app.powerbi.com/groups/me/reports/ee1a4ab8-cf63-4757-bb12-6494faf50554/b2df92bd1e5c546c2be2?experience=power-bi" target="_blank">View Report</a>
-        </p>
-      </div>
-
-      <div class="card small">
-        <h3>[Upcoming SQL Project]</h3>
-        <p>Placeholder for an SQL project. Coming soon!</p>
-        <div>
-          <span class="tag">SQL</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">ETL</span>
-        </div>
-      </div>
-
-      <div class="card featured-2 small">
-        <h3>Chatbot (Work in Progress)</h3>
-        <p>Creating a Clustering-Based Intent Identification Engine</p>
-        <div>
-          <span class="tag">NLP</span>
-          <span class="tag">Clustering</span>
-          <span class="tag">Unsupervised Learning</span>
-        </div>
-        <p>
-          🔗 <a href="https://github.com/katerinaharana/chatbot" target="_blank">GitHub Repo</a>
-        </p>
-      </div>
-    </div></section>
-
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <div class="two-column">
-      <div class="card" style="background-color: var(--accent-rose);">
-        <ul style="text-align:left; max-width: 600px; margin: 0 auto;">
-          <li>Azure Databricks & Spark for Data Engineers – Microsoft (in progress)</li>
-          <li>Data Science & Business Intelligence Bootcamp – Code.Hub (2022)</li>
-          <li>Python for Machine Learning & Data Science – Udemy</li>
-          <li>SQL Bootcamp – Udemy</li>
-          <li>Machine Learning – Coursera</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="two-column">
-      <div class="card" style="background-color: #e3e9ef;">
-        <p>Python • SQL • Power BI • Pandas • Scikit-Learn • ML Algorithms • Data Visualization </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <div class="two-column">
-      <div class="card" style="background-color: #d8dce0; color: #1f1f1f; border: 1px solid #6b797a;">
-        <ul style="text-align:left; max-width: 600px; margin: 0 auto;">
-          <li>MSc in Applied Mathematics – Hellenic Open University (2022)</li>
-          <li><strong>MSc Thesis:</strong> <a href="https://apothesis.eap.gr/archive/item/171611?lang=el" target="_blank" style="color: #5a3b5d;">Spectral Clustering on Gaussian Mixture Models</a><br>
-          This thesis investigates unsupervised clustering of multidimensional data generated by a Gaussian Mixture Model, emphasizing the spectral analysis of matrices derived from the data: By studying the eigenstructure of the sample covariance matrix, dimensionality is reduced using Principal Component Analysis, enabling efficient classification via the K-means algorithm in the transformed space.</li>
-          <li>BSc in Mathematics – University of Patras (2019)</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="two-column">
-      <div class="card" style="background-color: #f3e7ef;">
-        <p>Email: <a href="mailto:kate.harana@gmail.com">kate.harana@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/katerina-charana-074159213/" target="_blank">View my profile</a></p>
-        <p><a class="btn" href="CV Katerina Charana.pdf" target="_blank">Download CV</a></p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Katerina Charana</p>
-  </footer>
+      padding: 60px
