@@ -9,7 +9,15 @@
   <style>
     :root {
       --bg-light: #fefdfc;
-      --bg-soft: #e6e3f5;
+      --bg-soft-1: #d0e6e5;
+      --bg-soft-2: #f5e9de;
+      --bg-soft-3: #e9e7e2;
+      --bg-soft-4: #f3e7ef;
+      --bg-soft-5: #e6e3f5;
+      --cert-bg: #eecfd2;
+      --skills-bg: #e3e9ef;
+      --edu-bg: #d8dce0;
+      --contact-bg: #f3e7ef;
       --text-dark: #1f1f1f;
       --text-mid: #3b2f2f;
       --accent-blue: #2e3a59;
@@ -88,7 +96,6 @@
       margin: 0 auto;
     }
     .card {
-      background-color: var(--bg-soft);
       border: 1px solid var(--card-border);
       border-radius: 12px;
       padding: 25px;
@@ -121,6 +128,17 @@
       font-size: 0.9em;
       margin: 4px 6px 4px 0;
     }
+    .card:nth-child(1) { background-color: var(--bg-soft-1); } /* Fuel Consumption */
+    .card:nth-child(2) { background-color: var(--bg-soft-2); } /* Superstore */
+    .card:nth-child(3) { background-color: var(--bg-soft-3); } /* Housing */
+    .card:nth-child(4) { background-color: var(--bg-soft-4); } /* Chatbot */
+    .card:nth-child(5) { background-color: var(--bg-soft-5); } /* SQL */
+
+    #certificates .card { background-color: var(--cert-bg); }
+    #skills .card { background-color: var(--skills-bg); }
+    #education .card { background-color: var(--edu-bg); border: 1px solid #6b797a; color: var(--text-dark); }
+    #contact .card { background-color: var(--contact-bg); }
+
     .two-column {
       display: flex;
       flex-wrap: wrap;
@@ -137,6 +155,7 @@
     }
   </style>
 </head>
+
 <body>
   <nav>
     <a href="#about">About</a>
