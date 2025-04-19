@@ -1,4 +1,3 @@
-<!-- FULL INDEX UPDATED -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,16 +21,20 @@
       --text-mid: #3b2f2f;
       --accent-blue: #2e3a59;
       --accent-magenta: #5a3b5d;
-      --accent-purple: #d8c4db;
-      --accent-rose: #eecfd2;
       --card-border: #ddd;
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: var(--bg-light);
       color: var(--text-dark);
     }
+
     nav {
       position: sticky;
       top: 0;
@@ -43,34 +46,41 @@
       border-bottom: 1px solid var(--card-border);
       z-index: 1000;
     }
+
     nav a {
       color: var(--text-mid);
       text-decoration: none;
       font-weight: 500;
     }
+
     nav a:hover {
       color: var(--accent-magenta);
     }
+
     header {
       padding: 80px 20px 60px;
       text-align: center;
     }
+
     h1 {
       font-size: 3em;
       font-weight: 600;
     }
+
     h2 {
       font-size: 2em;
       font-weight: 600;
       color: var(--accent-magenta);
       margin-bottom: 20px;
     }
+
     p {
       max-width: 700px;
       margin: 0 auto 20px;
       font-size: 1.1em;
       text-align: justify;
     }
+
     .btn {
       background-color: #cfd7d7;
       color: var(--text-dark);
@@ -80,14 +90,17 @@
       border-radius: 4px;
       text-decoration: none;
     }
+
     .btn:hover {
       background-color: var(--accent-magenta);
       color: white;
     }
+
     section {
       padding: 60px 20px;
       text-align: center;
     }
+
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -95,30 +108,36 @@
       max-width: 1200px;
       margin: 0 auto;
     }
+
     .card {
       border: 1px solid var(--card-border);
       border-radius: 12px;
       padding: 25px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .card.small {
       padding: 20px;
       font-size: 0.95em;
       max-height: 400px;
       overflow: hidden;
     }
+
     .card:hover {
       transform: translateY(-6px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
+
     .card h3 {
       margin-top: 0;
     }
+
     .card a {
       color: var(--accent-magenta);
       font-weight: bold;
       text-decoration: underline;
     }
+
     .tag {
       display: inline-block;
       background-color: var(--accent-blue);
@@ -128,15 +147,20 @@
       font-size: 0.9em;
       margin: 4px 6px 4px 0;
     }
-    .card:nth-child(1) { background-color: var(--bg-soft-1); } /* Fuel Consumption */
-    .card:nth-child(2) { background-color: var(--bg-soft-2); } /* Superstore */
-    .card:nth-child(3) { background-color: var(--bg-soft-3); } /* Housing */
-    .card:nth-child(4) { background-color: var(--bg-soft-4); } /* Chatbot */
-    .card:nth-child(5) { background-color: var(--bg-soft-5); } /* SQL */
+
+    .card:nth-child(1) { background-color: var(--bg-soft-1); }
+    .card:nth-child(2) { background-color: var(--bg-soft-2); }
+    .card:nth-child(3) { background-color: var(--bg-soft-3); }
+    .card:nth-child(4) { background-color: var(--bg-soft-4); }
+    .card:nth-child(5) { background-color: var(--bg-soft-5); }
 
     #certificates .card { background-color: var(--cert-bg); }
     #skills .card { background-color: var(--skills-bg); }
-    #education .card { background-color: var(--edu-bg); border: 1px solid #6b797a; color: var(--text-dark); }
+    #education .card {
+      background-color: var(--edu-bg);
+      border: 1px solid #6b797a;
+      color: var(--text-dark);
+    }
     #contact .card { background-color: var(--contact-bg); }
 
     .two-column {
@@ -147,6 +171,7 @@
       max-width: 1100px;
       margin: 0 auto;
     }
+
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -155,8 +180,8 @@
     }
   </style>
 </head>
-
 <body>
+
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -175,7 +200,7 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects-grid">
-      <!-- Project 1 -->
+
       <div class="card">
         <h3>Predicting the City Cycle Fuel Consumption</h3>
         <p>Classification model to predict fuel efficiency category using ML techniques.</p>
@@ -183,15 +208,16 @@
           <span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">Neural Networks</span>
           <span class="tag">Classification</span><span class="tag">K-Means</span><span class="tag">PCA</span><span class="tag">EDA</span>
         </div>
-        <iframe loading="lazy" style="width: 100%; height: 300px; margin: 20px 0; border: none; border-radius: 8px;" 
+        <iframe loading="lazy" style="width: 100%; height: 300px; margin: 20px 0; border: none; border-radius: 8px;"
           src="https://www.canva.com/design/DAGktwBkV8U/F7_mr8fK4zZ1dc6CR66Tlw/view?embed" allowfullscreen>
         </iframe>
-        <p>🔗 <a href="https://github.com/katerinaharana/Team-2-Project" target="_blank">GitHub Repo</a><br>
-        📄 <a href="https://www.canva.com/design/DAGktwBkV8U/F7_mr8fK4zZ1dc6CR66Tlw/view" target="_blank">View Presentation</a></p>
+        <p>
+          🔗 <a href="https://github.com/katerinaharana/Team-2-Project" target="_blank">GitHub Repo</a><br>
+          📄 <a href="https://www.canva.com/design/DAGktwBkV8U/F7_mr8fK4zZ1dc6CR66Tlw/view" target="_blank">View Presentation</a>
+        </p>
       </div>
 
-      <!-- Project 2 -->
-      <div class="card">
+      <div class="card small">
         <h3>Superstore Sales Analysis</h3>
         <p>Power BI project analyzing sales data by region, category, and forecasting with seasonality.</p>
         <div>
@@ -199,12 +225,13 @@
           <span class="tag">DAX</span><span class="tag">Measures</span><span class="tag">Power Query</span>
         </div>
         <a href="https://streamable.com/nddlh8" target="_blank" style="display:inline-block;margin-top:10px;background-color:var(--accent-magenta);color:white;padding:8px 16px;border-radius:6px;text-decoration:none;font-weight:bold;">▶️ Watch Demo</a>
-        <p>🔗 <a href="https://github.com/katerinaharana/Superstore" target="_blank">GitHub Repo</a><br>
-        📄 <a href="https://app.powerbi.com/groups/me/reports/ee1a4ab8-cf63-4757-bb12-6494faf50554/b2df92bd1e5c546c2be2?experience=power-bi" target="_blank">View Report</a></p>
+        <p>
+          🔗 <a href="https://github.com/katerinaharana/Superstore" target="_blank">GitHub Repo</a><br>
+          📄 <a href="https://app.powerbi.com/groups/me/reports/ee1a4ab8-cf63-4757-bb12-6494faf50554/b2df92bd1e5c546c2be2?experience=power-bi" target="_blank">View Report</a>
+        </p>
       </div>
 
-      <!-- Project 3 -->
-      <div class="card">
+      <div class="card small">
         <h3>Housing Price Prediction</h3>
         <p>Machine learning regression project to predict house prices using feature engineering and model tuning.</p>
         <div>
@@ -213,8 +240,7 @@
         <p>🔗 <a href="https://github.com/katerinaharana/Housing-Price-Prediction" target="_blank">GitHub Repo</a></p>
       </div>
 
-      <!-- Project 4 -->
-      <div class="card">
+      <div class="card small">
         <h3>Chatbot (Work in Progress)</h3>
         <p>Creating a Clustering-Based Intent Identification Engine</p>
         <div>
@@ -223,14 +249,14 @@
         <p>🔗 <a href="https://github.com/katerinaharana/chatbot" target="_blank">GitHub Repo</a></p>
       </div>
 
-      <!-- Project 5 -->
-      <div class="card">
+      <div class="card small">
         <h3>[Upcoming SQL Project]</h3>
         <p>Placeholder for an SQL project. Coming soon!</p>
         <div>
           <span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">ETL</span>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -263,8 +289,9 @@
     <div class="two-column">
       <div class="card">
         <ul>
-          <li>MSc in Applied Mathematics – Hellenic Open University</li>
-          <li><strong>MSc Thesis:</strong> <em>Spectral Clustering on Gaussian Mixture Models</em></li>
+          <li>MSc in Applied Mathematics – Hellenic Open University </li>
+          <li><strong>MSc Thesis:</strong> <a href="https://apothesis.eap.gr/archive/item/171611?lang=el" target="_blank" style="color: #5a3b5d;">Spectral Clustering on Gaussian Mixture Models</a><br>
+          This thesis investigates unsupervised clustering of multidimensional data generated by a Gaussian Mixture Model, emphasizing the spectral analysis of matrices derived from the data: By studying the eigenstructure of the sample covariance matrix, dimensionality is reduced using Principal Component Analysis, enabling efficient classification via the K-means algorithm in the transformed space.</li>
           <li>BSc in Mathematics – University of Patras (2019)</li>
         </ul>
       </div>
@@ -285,5 +312,6 @@
   <footer>
     <p>&copy; 2025 Katerina Charana</p>
   </footer>
+
 </body>
 </html>
