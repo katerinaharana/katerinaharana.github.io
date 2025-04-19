@@ -9,11 +9,13 @@
   <style>
     :root {
       --bg-light: #fefdfc;
-      --bg-soft: #f5f2ec;
+      --bg-soft: #e6e3f5;
       --text-dark: #1f1f1f;
       --text-mid: #3b2f2f;
       --accent-blue: #2e3a59;
       --accent-magenta: #5a3b5d;
+      --accent-purple: #d8c4db;
+      --accent-rose: #eecfd2;
       --card-border: #ddd;
     }
     body {
@@ -91,6 +93,12 @@
       border-radius: 12px;
       padding: 25px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card.small {
+      padding: 20px;
+      font-size: 0.95em;
+      max-height: 400px;
+      overflow: hidden;
     }
     .card:hover {
       transform: translateY(-6px);
