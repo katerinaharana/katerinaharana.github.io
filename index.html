@@ -24,10 +24,6 @@
       --card-border: #ddd;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -101,18 +97,19 @@
       text-align: center;
     }
 
-      .projects-grid {
+    .projects-grid {
       display: grid;
       grid-template-areas:
         "project1 project2 project3"
         ". project4 project5";
       grid-template-columns: repeat(3, 1fr);
+      align-items: start;
       gap: 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    .projects-grid .card:nth-child(1) { grid-area: project1; background-color: var(--bg-soft-1); }
+    .projects-grid .card:nth-child(1) { grid-area: project1; background-color: var(--bg-soft-1); height: 100%; }
     .projects-grid .card:nth-child(2) { grid-area: project2; background-color: var(--bg-soft-2); }
     .projects-grid .card:nth-child(3) { grid-area: project3; background-color: var(--bg-soft-3); }
     .projects-grid .card:nth-child(4) { grid-area: project4; background-color: var(--bg-soft-4); }
@@ -123,13 +120,7 @@
       border-radius: 12px;
       padding: 25px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card.small {
-      padding: 20px;
-      font-size: 0.95em;
-      max-height: 400px;
-      overflow: hidden;
+      height: 100%;
     }
 
     .card:hover {
@@ -157,11 +148,14 @@
       margin: 4px 6px 4px 0;
     }
 
-    .card:nth-child(1) { background-color: var(--bg-soft-1); }
-    .card:nth-child(2) { background-color: var(--bg-soft-2); }
-    .card:nth-child(3) { background-color: var(--bg-soft-3); }
-    .card:nth-child(4) { background-color: var(--bg-soft-4); }
-    .card:nth-child(5) { background-color: var(--bg-soft-5); }
+    .two-column {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
     #certificates .card { background-color: var(--cert-bg); }
     #skills .card { background-color: var(--skills-bg); }
@@ -172,15 +166,6 @@
     }
     #contact .card { background-color: var(--contact-bg); }
 
-    .two-column {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -189,6 +174,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <nav>
