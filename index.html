@@ -101,13 +101,22 @@
       text-align: center;
     }
 
-    .projects-grid {
+      .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-areas:
+        "project1 project2 project3"
+        ". project4 project5";
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
+
+    .projects-grid .card:nth-child(1) { grid-area: project1; background-color: var(--bg-soft-1); }
+    .projects-grid .card:nth-child(2) { grid-area: project2; background-color: var(--bg-soft-2); }
+    .projects-grid .card:nth-child(3) { grid-area: project3; background-color: var(--bg-soft-3); }
+    .projects-grid .card:nth-child(4) { grid-area: project4; background-color: var(--bg-soft-4); }
+    .projects-grid .card:nth-child(5) { grid-area: project5; background-color: var(--bg-soft-5); }
 
     .card {
       border: 1px solid var(--card-border);
