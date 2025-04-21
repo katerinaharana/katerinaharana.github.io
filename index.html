@@ -99,21 +99,18 @@
 
     .projects-grid {
       display: grid;
-      grid-template-areas:
-        "project1 project2 project3"
-        ". project4 project5";
       grid-template-columns: repeat(3, 1fr);
-      align-items: start;
+      grid-auto-rows: minmax(100px, auto);
       gap: 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    .projects-grid .card:nth-child(1) { grid-area: project1; background-color: var(--bg-soft-1); height: 100%; }
-    .projects-grid .card:nth-child(2) { grid-area: project2; background-color: var(--bg-soft-2); }
-    .projects-grid .card:nth-child(3) { grid-area: project3; background-color: var(--bg-soft-3); }
-    .projects-grid .card:nth-child(4) { grid-area: project4; background-color: var(--bg-soft-4); }
-    .projects-grid .card:nth-child(5) { grid-area: project5; background-color: var(--bg-soft-5); }
+    .projects-grid .card:nth-child(1) { grid-column: 1; grid-row: 1 / span 2; background-color: var(--bg-soft-1); }
+    .projects-grid .card:nth-child(2) { grid-column: 2; grid-row: 1; background-color: var(--bg-soft-2); }
+    .projects-grid .card:nth-child(3) { grid-column: 3; grid-row: 1; background-color: var(--bg-soft-3); }
+    .projects-grid .card:nth-child(4) { grid-column: 2; grid-row: 2; background-color: var(--bg-soft-4); }
+    .projects-grid .card:nth-child(5) { grid-column: 3; grid-row: 2; background-color: var(--bg-soft-5); }
 
     .card {
       border: 1px solid var(--card-border);
