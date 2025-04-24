@@ -96,6 +96,14 @@
       padding: 60px 20px;
       text-align: center;
     }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(200px, auto); /* Optional tweak */
+  gap: 30px; /* Spacing between tiles */
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
   .card {
   border: 1px solid var(--card-border);
